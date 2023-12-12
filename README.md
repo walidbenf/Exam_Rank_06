@@ -1,3 +1,6 @@
 # Exam_Rank_05 42
 
-## miniserv
+## mini_serv
+
+### Expected files   : 
+                                  mini_serv.c
