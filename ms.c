@@ -46,10 +46,9 @@ int main(int ac, char **av) {
 
     struct sockaddr_in  servaddr;
     socklen_t           len;
-   	bzero(&servaddr, sizeof(servaddr));
-    servaddr.sin_family = AF_INET;
-	servaddr.sin_addr.s_addr = htonl(2130706433); //127.0.0.1
-	servaddr.sin_port = htons(atoi(av[1]));
+    bzero(&servaddr, sizeof(servaddr));
+    servaddr.sin_family = AF_INET;servaddr.sin_addr.s_addr = htonl(2130706433); //127.0.0.1
+    servaddr.sin_port = htons(atoi(av[1]));
 
     if ((bind(sfd, (const struct sockaddr *)&servaddr, sizeof(servaddr))) < 0)
         fterr(NULL);
